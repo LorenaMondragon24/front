@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles de la Película</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    
+    <link rel="stylesheet" href="css/pelicula.css">
+</head>
+<body>
+
+
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow ">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center fw-bold" href="#">
+                <i class="bi bi-camera-reels me-2 fs-3"></i> PROMOVIE
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <a href="index.html" class="text-white fs-4 me-3"><i class="bi bi-house-door"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <main class="container mt-5 pt-5  text-white" style="background-color: rgba(0, 0, 0, 0.8); border-radius:1%;"  >
+        <section class="row">
+            <div class="col-md-4 text-center">
+                <img id="imagen-pelicula" class="img-fluid rounded shadow-lg" src="" alt="Póster de la película">
+            </div>
+            <div class="col-md-8">
+                <h2 id="titulo-pelicula" class="fw-bold"></h2>
+                <p><strong>Género:</strong> <span id="genero-pelicula" class="badge bg-primary"></span></p>
+                <p><strong>Rating:</strong> <span id="rating-pelicula"></span> ⭐</p>
+                <p><strong>Actores:</strong> <span id="actores-pelicula"></span></p>
+                
+                <p>"<Strong id="descripcion-pelicula" class="fst-italic" ></Strong>"</p>
+
+                <p><strong>Informacion :</strong> <span id="informacion-pelicula"></span></p>
+                <p><strong>Sinopsis:</strong> <span id="sipnosis-pelicula"></span></p>
+
+    
+   
+
+
+                
+                
+            </div>
+        </section>  
+
+
+
+
+
+
+        <!-- Sección de comentarios -->
+      <section class="comentarios mt-4 mb-3 p-3" >
+    <h2 class="fw-bold">Comentarios</h2>
+    
+    <!-- Input para el nombre del usuario -->
+    <input type="text" id="nombre-usuario" class="form-control mb-2 text-white"   style="background-color: rgba(0, 0, 0, 0.8);"  placeholder="Tu nombre...">
+
+    <!-- Área de texto para el comentario -->
+    <textarea id="comentario" class="form-control mb-3 text-white"  style="background-color: rgba(0, 0, 0, 0.8);" rows="3" placeholder="Escribe tu comentario..."></textarea>
+
+    <!-- Botón para enviar -->
+    <button class="btn btn-success" onclick="guardarComentario()">
+        <i class="bi bi-send"></i> Enviar
+    </button>
+
+    <!-- Botón para borrar comentarios -->
+    <button id="borrar-todo" class="btn btn-danger ms-2" onclick="borrarComentarios()" style="display: none;">
+        <i class="bi bi-trash"></i> Borrar todo
+    </button>
+
+    <!-- Contenedor donde se mostrarán los comentarios -->
+    <div id="lista-comentarios" class="mt-3 border p-3 rounded  style="background-color: rgba(0, 0, 0, 0.8);""></div>
+</section>
+
+    </main>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="Js/pelicula.js"></script>
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p>&copy; 2025</p>
+    </footer>
+
+</body>
+</html>

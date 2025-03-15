@@ -1,0 +1,25 @@
+body {
+    background: url('../Imagenes/Login.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+.container-login {
+    font-style:oblique;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    min-width: 35%;
+    padding: 15px;
+
+}
+.login-card {
+    width: 100%;
+    max-width: 800px;
+}
+

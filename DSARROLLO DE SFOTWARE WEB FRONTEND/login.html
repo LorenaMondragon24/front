@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesión</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+
+    <link rel="stylesheet" href="css/Login.css">    
+
+   
+
+</head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand d-flex align-items-center text-white fw-bold" href="#">
+                    <i class="bi bi-film me-2 fs-3"></i> <span>PROMOVIE</span>
+                </a>
+                <div class="ms-auto">
+                    <a href="index.html" class="text-white fs-4"><i class="bi bi-house-door"></i></a>
+                </div>
+            </div>
+        </nav>
+    
+        <section class="container-login">
+            <div class="card p-4 bg-dark text-white bg-opacity-75 login-card">
+                <h2 id="titulo-formulario" class="text-center mb-4">Iniciar Sesión</h2>
+                <i class="bi bi-person-circle text-center fs-1 text-grey"></i>
+                <form id="form-login">
+                    <div class="mb-3">
+                        <label for="usuario" class="form-label">Usuario</label>
+                        <input type="text" class="form-control" id="usuario" placeholder="Ingresa tu usuario">
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" id="password" placeholder="********">
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Ingresar</button>
+                    <div class="text-center mt-3">
+                        <a href="#" class="text-decoration-none">¿Olvidaste tu contraseña?</a>
+                    </div>
+                    <div class="text-center mt-3">
+                        <p>¿No tienes cuenta? <a href="#" onclick="mostrarRegistro()">Regístrate</a></p>
+                    </div>
+                </form>
+                <form id="form-registro" style="display: none;">
+                    <div class="mb-3">
+                        <label for="nuevo-usuario" class="form-label">Nombre de usuario</label>
+                        <input type="text" class="form-control" id="nuevo-usuario" placeholder="Elige un usuario">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Correo electrónico</label>
+                        <input type="email" class="form-control" id="email" placeholder="correo@ejemplo.com">
+                    </div>
+                    <div class="mb-3">
+                        <label for="new-password" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" id="new-password" placeholder="********">
+                    </div>
+                    <button type="submit" class="btn btn-success w-100">Registrarse</button>
+                    <div class="text-center mt-3">
+                        <p>¿Ya tienes cuenta? <a href="#" onclick="mostrarLogin()">Iniciar Sesión</a></p>
+                    </div>
+                </form>
+            </div>
+        </section>
+    
+        <script>
+            function mostrarRegistro() {
+                document.getElementById("form-login").style.display = "none";
+                document.getElementById("form-registro").style.display = "block";
+                document.getElementById("titulo-formulario").innerText = "Registrarse";
+            }
+    
+            function mostrarLogin() {
+                document.getElementById("form-login").style.display = "block";
+                document.getElementById("form-registro").style.display = "none";
+                document.getElementById("titulo-formulario").innerText = "Iniciar Sesión";
+            }
+        </script>
+    </body>
+    </html> 
